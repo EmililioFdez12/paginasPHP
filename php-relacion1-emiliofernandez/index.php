@@ -119,8 +119,7 @@
     <br>
     <!-- Ej8 -->
     <?php
-    $numero1 = 0;
-    $numero2 = 25;
+    $numero1 = 26;
     $suma = 0;
 
     for ($i=0; $i <= $numero2 ; $i++) { 
@@ -128,6 +127,8 @@
     }
         echo $suma;
     ?>
+
+
 </body>
 
 </html>
