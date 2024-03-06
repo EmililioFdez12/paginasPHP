@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Suscripción boletín</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="molde">
+        <div class="datosPersonales">
+            <h1>Formularios</h1>
+            <p>Los datos recogidos se trasladaran a otra página.</p>
+            <form action="comprobar.php" method="post">
+                <p class="personales" style="color: orange; text-decoration: underline;">Datos Personales</p>
+                <p><input type="text" class="lblTexto" name="nombre" placeholder="NOMBRE" />
+                    <input type="text" class="lblTexto" name="apellidos" placeholder="APELLIDOS" />
+                    <br>
+                    <input type="text" class="lblTexto" name="email" placeholder="EMAIL" />
+                    <input type="password" class="lblTexto" name="contras" placeholder="CONTRASEÑA" /><br />
+                </p>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    SEXO
+                    <br>
+                    <div class="radioButton">
+                        <input type="radio" name="sexo" id="varon" value="V">
+                        <label for="varon">Varón</label>
+                    </div>
+                    <input type="radio" name="sexo" value="M" class="radio"> Mujer</p>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    Nivel de estudios<br />
+                    <input type="radio" name="estudios" value="elemental" checked="checked">
+                    Certificado escolar<br />
+                    <input type="radio" name="estudios" value="basico" />
+                    Graduado en E.S.O.<br />
+                    <input type="radio" name="estudios" value="bachiller" />
+                    Bachiller - Formación Profesional <br />
+                    <input type="radio" name="estudios" value="Diplomado" />
+                    Diplomado<br />
+                    <input type="radio" name="estudios" value="licenciado" />
+                    Licenciado o Doctorado<br />
+                </td>
+                <td>
+                    Interesado en los siguientes temas: <br />
+                    <input type="checkbox" name="musica" /> Música<br />
+                    <input type="checkbox" name="deportes" /> Deportes<br />
+                    <input type="checkbox" name="cine" /> Cine<br />
+                    <input type="checkbox" name="libros" /> Libros<br />
+                    <input type="checkbox" name="ciencia" /> Ciencia</p>
+                </td>
+            </tr>
+        </table>
+        <p>Día de la semana que le interesa recibirlo:</p>
+        <select name="dia">
+            <option>día de la semana:</option>
+            <option value="">lunes</option>
+            <option value="Martes">martes</option>
+            <option value="Miércoles">miercoles</option>
+            <option value="Jueves">jueves</option>
+            <option value="Viernes">viernes</option>
+            <option value="Sábado">sábado</option>
+            <option value="Domingo">domingo</option>
+        </select>
+        </p>
+        <p>Su opinión: <br />
+            <textarea name="comentario" rows="5" cols="50">Comentario: </textarea>
+        <p><input type="submit" value="Comprobar el formulario">
+            <input type="reset" value="borrar todo">
+        </p>
+        </form>
+    </div>
+</body>
+
+</html>
