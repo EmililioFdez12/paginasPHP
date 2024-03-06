@@ -1,84 +1,102 @@
 <html>
 
 <head>
-    <title>Suscripción boletín</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Suscripción boletín</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="molde">
-        <div class="datosPersonales">
-            <h1>Formularios</h1>
-            <p>Los datos recogidos se trasladaran a otra página.</p>
-            <form action="comprobar.php" method="post">
-                <p class="personales" style="color: rgb(255, 123, 0); text-decoration: underline;">Datos Personales</p>
-                <p><input type="text" class="lblTexto" name="nombre" placeholder="NOMBRE" />
-                    <input type="text" class="lblTexto" name="apellidos" placeholder="APELLIDOS" />
-                    <br>
-                    <input type="text" class="lblTexto" name="email" placeholder="EMAIL" />
-                    <input type="password" class="lblTexto" name="contras" placeholder="CONTRASEÑA" /><br />
-                </p>
-        </div>
-        <div class="radio-input-wrapper">
-            <p>Sexo</p>
-            <label class="label">
-              <input type="radio" name="sexo" value="V" class="radio-input" >
-              <div class="radio-design"></div>
-              <div class="label-text">Varón</div>
-            </label>
-            <label class="label">
-              <input type="radio" name="sexo" value="M" class="radio-input" >
-              <div class="radio-design"></div>
-              <div class="label-text">Mujer</div>
-            </label>
-          </div>
+  <div class="molde">
+    <div class="datosPersonales">
+      <h1>Formularios</h1>
+      <p>Los datos recogidos se trasladaran a otra página.</p>
+      <form action="comprobar.php" method="post">
+        <p class="personales" style="color: #ff7b00; text-decoration: underline;">Datos Personales</p>
+        <p><input type="text" class="lblTexto" name="nombre" placeholder="NOMBRE" />
+          <input type="text" class="lblTexto" name="apellidos" placeholder="APELLIDOS" />
+          <br>
+          <input type="text" class="lblTexto" name="email" placeholder="EMAIL" />
+          <input type="password" class="lblTexto" name="contras" placeholder="CONTRASEÑA" /><br />
+        </p>
+    </div>
+    
+    <div class="radio-input-wrapper2">
+      <p style="color:#ff7b00">Nivel de Estudios</p>
+      <label class="label">
+        <input type="radio" name="estudios" value="elemental" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Cert Escolar</div>
+      </label>
+      <label class="label">
+        <input type="radio" name="estudios" value="basico" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Grado E.S.O</div>
+      </label>
+      <label class="label">
+        <input type="radio" name="estudios" value="bachiller" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Bachiller</div>
+      </label>
+      <label class="label">
+        <input type="radio" name="estudios" value="licenciado" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Licenciado</div>
+      </label>
+      <label class="label">
+        <input type="radio" name="estudios" value="diplomado" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Diplomado</div>
+      </label>
+    </div>
 
-          <div class="radio-input-wrapper">
-            <p>Nivel de Estudios</p>
-            <label class="label">
-                <input type="radio" name="estudios" value="elemental" class="radio-input" checked="checked">
-              <div class="radio-design"></div>
-              <div class="label-text">Certificado Escolar</div>
-            </label>
-            <label class="label">
-              <input type="radio" name="sexo" value="M" class="radio-input" >
-              <div class="radio-design"></div>
-              <div class="label-text">Mujer</div>
-            </label>
-          </div>
+    <div class="cbx">
+      <p style="font-size: 2.2vh; color:#ff7b00">Interesado en los siguientes temas:</p>
+      <label class="container">
+        <input type="checkbox" name="musica">Música
+        <div class="checkmark"></div>
+      </label>
+      <label class="container">
+        <input type="checkbox">Deportes
+        <div class="checkmark"></div>
+      </label>
+      <label class="container">
+        <input type="checkbox">Cine
+        <div class="checkmark"></div>
+      </label>
+      <label class="container">
+        <input type="checkbox">Libros
+        <div class="checkmark"></div>
+      </label>
+      <label class="container">
+        <input type="checkbox">Ciencia
+        <div class="checkmark"></div>
+      </label>
+    </div>
 
-        <!-- <table>
-            <tr>
-                <td>
-                    <br />
-                  
-                    Certificado escolar<br />
-                    <input type="radio" name="estudios" value="basico" />
-                    Graduado en E.S.O.<br />
-                    <input type="radio" name="estudios" value="bachiller" />
-                    Bachiller - Formación Profesional <br />
-                    <input type="radio" name="estudios" value="Diplomado" />
-                    Diplomado<br />
-                    <input type="radio" name="estudios" value="licenciado" />
-                    Licenciado o Doctorado<br />
-                </td>
-                <td>
-                    Interesado en los siguientes temas: <br />
-                    <input type="checkbox" name="musica" /> Música<br />
-                    <input type="checkbox" name="deportes" /> Deportes<br />
-                    <input type="checkbox" name="cine" /> Cine<br />
-                    <input type="checkbox" name="libros" /> Libros<br />
-                    <input type="checkbox" name="ciencia" /> Ciencia</p>
-                </td>
-            </tr>
-        </table>
-        <p>Día de la semana que le interesa recibirlo:</p>
+    <div class="radio-input-wrapper">
+      <p style="color:#ff7b00">Sexo </p>
+      <label class="label">
+        <input type="radio" name="sexo" value="V" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">Si por favor</div>
+      </label>
+      <label class="label">
+        <input type="radio" name="sexo" value="M" class="radio-input">
+        <div class="radio-design"></div>
+        <div class="label-text">No</div>
+      </label>
+    </div>
+
+
+
+
+    <!--         <p>Día de la semana que le interesa recibirlo:</p>
         <select name="dia">
-            <option>día de la semana:</option>
+            <option>Día de la semana:</option>
             <option value="">lunes</option>
             <option value="Martes">martes</option>
             <option value="Miércoles">miercoles</option>
@@ -92,9 +110,9 @@
             <textarea name="comentario" rows="5" cols="50">Comentario: </textarea>
         <p><input type="submit" value="Comprobar el formulario">
             <input type="reset" value="borrar todo">
-        </p>
-        </form> -->
-    </div>
+        </p> -->
+    </form>
+  </div>
 </body>
 
 </html>
