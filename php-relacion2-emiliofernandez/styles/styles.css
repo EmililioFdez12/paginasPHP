@@ -4,7 +4,7 @@
 }
 
 h1{
-    color:orange;
+    color:rgb(255, 123, 0);
     margin-left: 1vh;
 }
 
@@ -13,17 +13,17 @@ body{
     font-weight: 400;
     font-style: normal;    
     font-size: 3vh;
-    background: repeating-linear-gradient(45deg, orange 0%, orange 25%, white 25%, white 50%, orange 50%, orange 75%, white 75%, white 100%); 
+    background: repeating-linear-gradient(45deg, rgb(255, 123, 0) 0%, rgb(255, 123, 0) 25%, white 25%, 
+                    white 50%, rgb(255, 123, 0) 50%, rgb(255, 123, 0) 75%, white 75%, white 100%); 
 }
 .molde{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
     width: 45vw;
     height: 42vw;
     flex-wrap: wrap;
     background: white;
+    border:1px solid rgba(0,0,0,0.1);
     border-radius: 0.4vh;
     margin-left: 58vh;
     margin-top: 4vh;
@@ -32,9 +32,9 @@ body{
 
 .lblTexto{
     width: 15vw;
-    height: 5vh;
-    border:2px solid orange;
-    border-radius: 0.9vh;
+    height: 3.5vh;
+    border:2px solid rgb(255, 123, 0);
+    border-radius: 0.5vh;
     margin-left: -0.5vh;
 }
 
@@ -46,10 +46,96 @@ input{
 }
 
 input::placeholder{
-    color:black;
+    color:rgb(0, 0, 0,0.7);
     font-weight: bold;
+}
+
+.datosPersonales{
+    border:2px solid blue;
+    height: 30vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .personales{
     font-size: 2.5vh;
 }
+
+
+
+/* MAIN */
+/* =============================================== */
+
+.radio-input-wrapper{
+    border:2px solid red;
+    width: 6vw;
+    margin-top: -29vh;
+    height: 20vh;
+}
+
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+    padding: 14px 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .label:hover,
+  .label:focus-within,
+  .label:active {
+    background: hsla(0, 0%, 80%, 0.5);
+  }
+  
+  .radio-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .radio-design {
+    width: 26px;
+    height: 26px;
+    border-radius: 1vh;
+    background: linear-gradient(to right bottom, hsl(9, 97%, 62%), hsl(27, 100%, 50%));
+    position: relative;
+  }
+  
+  .radio-design::before {
+    content: '';
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+  }
+  
+  .radio-input:checked+.radio-design::before {
+    transform: scale(0);
+  }
+  
+  .label-text {
+    color: hsl(0, 0%, 25%);
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    transition: .3s;
+  }
+  
+  .radio-input:checked~.label-text {
+    color: hsl(0, 0%, 25%);
+  }

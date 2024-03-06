@@ -15,7 +15,7 @@
             <h1>Formularios</h1>
             <p>Los datos recogidos se trasladaran a otra página.</p>
             <form action="comprobar.php" method="post">
-                <p class="personales" style="color: orange; text-decoration: underline;">Datos Personales</p>
+                <p class="personales" style="color: rgb(255, 123, 0); text-decoration: underline;">Datos Personales</p>
                 <p><input type="text" class="lblTexto" name="nombre" placeholder="NOMBRE" />
                     <input type="text" class="lblTexto" name="apellidos" placeholder="APELLIDOS" />
                     <br>
@@ -23,24 +23,39 @@
                     <input type="password" class="lblTexto" name="contras" placeholder="CONTRASEÑA" /><br />
                 </p>
         </div>
+        <div class="radio-input-wrapper">
+            <p>Sexo</p>
+            <label class="label">
+              <input type="radio" name="sexo" value="V" class="radio-input" >
+              <div class="radio-design"></div>
+              <div class="label-text">Varón</div>
+            </label>
+            <label class="label">
+              <input type="radio" name="sexo" value="M" class="radio-input" >
+              <div class="radio-design"></div>
+              <div class="label-text">Mujer</div>
+            </label>
+          </div>
 
-        <table>
+          <div class="radio-input-wrapper">
+            <p>Nivel de Estudios</p>
+            <label class="label">
+                <input type="radio" name="estudios" value="elemental" class="radio-input" checked="checked">
+              <div class="radio-design"></div>
+              <div class="label-text">Certificado Escolar</div>
+            </label>
+            <label class="label">
+              <input type="radio" name="sexo" value="M" class="radio-input" >
+              <div class="radio-design"></div>
+              <div class="label-text">Mujer</div>
+            </label>
+          </div>
+
+        <!-- <table>
             <tr>
                 <td>
-                    SEXO
-                    <br>
-                    <div class="radioButton">
-                        <input type="radio" name="sexo" id="varon" value="V">
-                        <label for="varon">Varón</label>
-                    </div>
-                    <input type="radio" name="sexo" value="M" class="radio"> Mujer</p>
-                </td>
-            </tr>
-            <br>
-            <tr>
-                <td>
-                    Nivel de estudios<br />
-                    <input type="radio" name="estudios" value="elemental" checked="checked">
+                    <br />
+                  
                     Certificado escolar<br />
                     <input type="radio" name="estudios" value="basico" />
                     Graduado en E.S.O.<br />
@@ -78,7 +93,7 @@
         <p><input type="submit" value="Comprobar el formulario">
             <input type="reset" value="borrar todo">
         </p>
-        </form>
+        </form> -->
     </div>
 </body>
 
