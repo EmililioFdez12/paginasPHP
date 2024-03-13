@@ -1,6 +1,10 @@
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Suscripción boletín</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
   <div class="molde">
     <div class="datosPersonales">
@@ -23,33 +26,33 @@
           <input type="password" class="lblTexto" name="contras" placeholder="CONTRASEÑA" /><br />
         </p>
     </div>
-    
+
     <div class="radio-input-wrapper2">
-      <p style="color:#ff7b00">Nivel de Estudios</p>
+      <p style="color:#ff7b00">Físico</p>
       <label class="label">
-        <input type="radio" name="estudios" value="elemental" class="radio-input">
+        <input type="radio" name="fisico" value="15" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Cert Escolar</div>
+        <div class="label-text">+15 Horas Semanales</div>
       </label>
       <label class="label">
-        <input type="radio" name="estudios" value="basico" class="radio-input">
+        <input type="radio" name="fisico" value="10" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Grado E.S.O</div>
+        <div class="label-text">+10 Horas Semanales</div>
       </label>
       <label class="label">
-        <input type="radio" name="estudios" value="bachiller" class="radio-input">
+        <input type="radio" name="fisico" value="7" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Bachiller</div>
+        <div class="label-text">+7 Horas Semanales</div>
       </label>
       <label class="label">
-        <input type="radio" name="estudios" value="licenciado" class="radio-input">
+        <input type="radio" name="fisico" value="3" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Licenciado</div>
+        <div class="label-text">+3 Horas Semanales</div>
       </label>
       <label class="label">
-        <input type="radio" name="estudios" value="diplomado" class="radio-input">
+        <input type="radio" name="fisico" value="0" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Diplomado</div>
+        <div class="label-text">0 Horas Semanales</div>
       </label>
     </div>
 
@@ -60,19 +63,19 @@
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Deportes
+        <input type="checkbox" name="deportes">Deportes
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Cine
+        <input type="checkbox" name="cine">Cine
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Libros
+        <input type="checkbox" name="libros">Libros
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Ciencia
+        <input type="checkbox" name="ciencia">Ciencia
         <div class="checkmark"></div>
       </label>
     </div>
@@ -82,37 +85,43 @@
       <label class="label">
         <input type="radio" name="sexo" value="V" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">Si por favor</div>
+        <div class="label-text">Varón</div>
       </label>
       <label class="label">
         <input type="radio" name="sexo" value="M" class="radio-input">
         <div class="radio-design"></div>
-        <div class="label-text">No</div>
+        <div class="label-text">Mujer</div>
       </label>
     </div>
 
 
 
+    <div class="semana">
+      <p>Categoría Favorita:</p>
+      <select name="categoria">
+        <option value="Aventura">Aventura</option>
+        <option value="Historia">Historia</option>
+        <option value="CCFF">Ciencia Ficción</option>
+        <option value="Conspirar">Los Conspiranoicos</option>
+        <option value="Multijugador">Multiplayer</option>
+        <option value="Cooperativo">Cooperativo</option>
+        <option value="Simulacion">Simulación</option>
+      </select>
+    </div>
+    <div class="opinion">
+      <p>Su opinión: <br />
+        <textarea name="comentario" rows="5" cols="60" placeholder="Comentario"></textarea>
+    </div>
+    <div class="comprobarFormulario">
+      <input type="submit" value="Comprobar">
+    </div>
+    <div class="comprobarFormulario">
+        <input type="reset" value="Borrar">
+    </div>
 
-    <!--         <p>Día de la semana que le interesa recibirlo:</p>
-        <select name="dia">
-            <option>Día de la semana:</option>
-            <option value="">lunes</option>
-            <option value="Martes">martes</option>
-            <option value="Miércoles">miercoles</option>
-            <option value="Jueves">jueves</option>
-            <option value="Viernes">viernes</option>
-            <option value="Sábado">sábado</option>
-            <option value="Domingo">domingo</option>
-        </select>
-        </p>
-        <p>Su opinión: <br />
-            <textarea name="comentario" rows="5" cols="50">Comentario: </textarea>
-        <p><input type="submit" value="Comprobar el formulario">
-            <input type="reset" value="borrar todo">
-        </p> -->
     </form>
   </div>
 </body>
 
 </html>
+
