@@ -18,7 +18,7 @@
     <div class="datosPersonales">
       <h1>Formularios</h1>
       <p>Los datos recogidos se trasladaran a otra página.</p>
-      <form action="comprobar.php" method="post">
+      <form action="insertar.php" method="post">
         <p class="personales" style="color: #ff7b00; text-decoration: underline;">Datos Personales</p>
         <p><input type="text" class="lblTexto" name="nombre" placeholder="NOMBRE" />
           <input type="text" class="lblTexto" name="apellidos" placeholder="APELLIDOS" />
@@ -60,23 +60,23 @@
     <div class="cbx">
       <p style="font-size: 2.2vh; color:#ff7b00">Interesado en los siguientes temas:</p>
       <label class="container">
-        <input type="checkbox" name="musica">Música
+        <input type="checkbox" value="musica" name="aficiones[]">Música
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Deportes
+        <input type="checkbox" value="deportes" name="aficiones[]">Deportes
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Cine
+        <input type="checkbox" value="cine" name="aficiones[]">Cine
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Libros
+        <input type="checkbox" value="libros" name="aficiones[]">Libros
         <div class="checkmark"></div>
       </label>
       <label class="container">
-        <input type="checkbox">Ciencia
+        <input type="checkbox" value="ciencia" name="aficiones[]">Ciencia
         <div class="checkmark"></div>
       </label>
     </div>
@@ -95,8 +95,6 @@
       </label>
     </div>
 
-
-
     <div class="semana">
       <p>Categoría Favorita:</p>
       <select name="dia">
@@ -113,12 +111,11 @@
       <p>Su opinión: <br />
         <textarea name="comentario" rows="5" cols="60" placeholder="Comentario"></textarea>
     </div>
-    <!--   <p><input type="submit" value="Comprobar el formulario">
+      <p><input type="submit" value="Comprobar el formulario">
         <input type="reset" value="borrar todo">
-      </p> -->
+      </p>
 
     </form>
   </div>
 </body>
-
 </html>
