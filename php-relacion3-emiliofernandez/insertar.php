@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost:3307";
 $usuario = "root";
-$pass = "";
+$pass = '';
 $bd = "prueba";
 
 $conexion = mysqli_connect($servidor, $usuario, $pass, $bd);
@@ -12,16 +12,16 @@ if (!$conexion){
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
     $email = $_POST['email'];
-    $contraseña = $_POST['contras'];
+    $contraseña = $_POST['contraseña'];
     $fisico = $_POST['fisico'];
     $aficiones = isset($_POST['aficiones']) ? implode(",", $_POST['aficiones']) : "NS/NC";
     $sexo = $_POST['sexo'];
-    $dia = $_POST['dia'];
+    $categoria = $_POST['categoria'];
     $comentario = $_POST['comentario'];
 
     //Introducimos los valores del formulario en la BD:
     $sql = "INSERT INTO datospersonales (Nombre, Apellidos, Email, Contraseña, Fisico, Aficiones, Sexo, Categoria, Opinion) 
-    VALUES ('$nombre', '$apellidos', '$email', '$contraseña', '$fisico', '$aficiones', '$sexo', '$dia', '$comentario')";
+    VALUES ('$nombre', '$apellidos', '$email', '$contraseña', '$fisico', '$aficiones', '$sexo', '$categoria', '$comentario')";
 
     if (mysqli_query($conexion, $sql)) {
         echo "Datos introducidos correctamente <br /><a href='./index.html'>Volver</a>";
