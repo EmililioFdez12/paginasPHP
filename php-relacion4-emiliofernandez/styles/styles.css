@@ -1,0 +1,241 @@
+* {
+    font-family: 'Raleway';
+    margin: 0;
+}
+
+body {
+    --color: #242424;
+    background-color: #181818;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 99vw;
+    height: 100vh;
+}
+
+.textoTitulo {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12vh;
+    font-weight: 700;
+    width: 55vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    color: #121212;
+    background-color: #eaeaea;
+    border-radius: 1vh;
+    margin-bottom: 5vh;
+}
+
+.baseDatos {
+    font-size: 4vh;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    color: #eaeaea;
+    width: 20vw;
+    height: 10vh;
+    border: 2px solid #b6ff8c;
+    border-radius: 1vh;
+    box-shadow: green inset 0px 0px 5px 1px,
+        green 0px 0px 5px 1px;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.baseDatos:hover {
+    border: 2px solid #cb8cff;
+    box-shadow: #901aff inset 0px 0px 5px 1px,
+        #901aff 0px 0px 5px 1px;
+}
+
+.contenedorA {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 95vh;
+    margin-top: -8vh;
+}
+
+.introduceDatos {
+    background-color: #eaeaea;
+    border-radius: 1vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+    width: 25vw;
+    height: auto;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #46c53a;
+    margin: 2vh;
+}
+
+#eliminaDatos {
+    background-color: #eaeaea;
+    border-radius: 1vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+    width: 20vw;
+    height: 12vh;
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+.warning {
+    position: absolute;
+    bottom: -81.5vh;
+    color: #ff1b1b;
+    margin: 1vh;
+    width: 4vw;
+    height: auto;
+}
+
+
+.texto {
+    font-size: 4vh;
+    width: 20vw;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.3vh solid #46c53a;
+    transition: border-bottom 0.3s ease;
+}
+
+.texto:focus {
+    outline: none;
+    border-bottom: 0.3vh solid #901aff;
+}
+
+::placeholder {
+    font-size: 3vh;
+    color: #181818;
+}
+
+.confirmar {
+    background-color: #eaeaea;
+    font-size: 2.5vh;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+    padding: 1vh;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px 0 rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0.5vh;
+    transition: transform 0.1s;
+    transition: color 0.2s;
+    color: #46c53a;
+}
+
+.confirmar:hover {
+    color: #901aff;
+}
+
+.confirmar:active {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translate(0.2vh, 0.2vh);
+    color: #901aff;
+}
+
+#eliminar {
+    background-color: #eaeaea;
+    font-size: 2.5vh;
+    font-weight: 700;
+    width: 20vw;
+    height: auto;
+    padding: 1vh;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px 0 rgba(240, 240, 240, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0.5vh;
+    transition: width 1s;
+    transition: transform 0.1s;
+    color: #ff1b1b;
+}
+
+#eliminar:active {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translate(0.2vh, 0.2vh);
+    color: #ff3300;
+    text-shadow: #ff1b1b 0 0 2px;
+}
+
+.botonCliente {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+.nuevoCliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#confirmMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Ocultar el mensaje inicialmente */
+}
+
+#confirmButtons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#confirmButtons button {
+    margin: 0 10px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#confirmButtons button.ok {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#confirmButtons button.cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
