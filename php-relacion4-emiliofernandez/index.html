@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <title>Ejemplo práctica 3</title>
+  <title>Práctica 4 PHP</title>
 </head>
 
 <body>
@@ -22,44 +22,47 @@
   </div>
 
   <div class="contenedorA">
-    <form action="introducirregistro.php" method="post">
-      <div class="introduceDatos">
+    <div class="introduceDatos">
+      <form action="introducirregistro.php" method="post">
         <div class="nuevoCliente">
           Nuevo Cliente
           <br>
           <input class="texto" type="text" placeholder="Nombre" name="nombre" />
           <input class="texto" type="text" placeholder="Edad" name="edad" />
-          <input class="texto" type="text" placeholder="Fecha de Nacimiento" name="fechaNacimiento" maxlength="10" onkeyup="formatoFecha(this)">
+          <input class="texto" type="text" placeholder="Fecha de Nacimiento" name="fechaNacimiento" maxlength="10"
+            onkeyup="formatoFecha(this)">
           <input class="texto" type="text" placeholder="Nº Hijos" name="hijos" maxlength="2">
           <input class="texto" type="text" placeholder="Domicilio" name="domicilio">
           <div class="botonCliente">
             <input class="confirmar" type="submit" value="Enviar" style="margin-right: 2vh;">
-            <form action="mostrar.php" method="post">
-              <input class="confirmar" type="submit" value="Mostrar valores">
-            </form>
           </div>
+        </form>
+        <form action="mostrar.php" method="post">
+          <input class="confirmar" type="submit" value="Mostrar valores">
+        </form>
+        </div>  
+    </div>
+
+    
+
+    <form action="actualizar.php" method="post">
+      <div class="introduceDatos">
+        <div class="nuevoCliente">
+          Actualizar Cliente
+          <br>
+          <input class="texto" type="number" placeholder="Nº de Registro a Eliminar" name="identificador"
+            style="width: 20vw;">
+          <input class="texto" type="text" placeholder="Nombre" name="nvonombre" />
+          <input class="texto" type="text" placeholder="Edad" name="nvoedad" />
+          <input class="texto" type="text" placeholder="Fecha de Nacimiento" name="nvofechaNacimiento" maxlength="10"
+            onkeyup="formatoFecha(this)">
+          <input class="texto" type="text" placeholder="Nº Hijos" name="nvohijos" maxlength="2">
+          <input class="texto" type="text" placeholder="Domicilio" name="nvodomicilio">
+          <input class="confirmar" type="submit" value="Actualizar" style="margin-top:2vh ;">
         </div>
       </div>
     </form>
 
-    <form action="actualizar.php" method="post">
-      <div class="introduceDatos">
-          <div class="nuevoCliente">
-              Actualizar Cliente
-              <br>
-              <input class="texto" type="number" placeholder="Nº de Registro a Eliminar" name="identificador"
-                  style="width: 20vw;">
-              <input class="texto" type="text" placeholder="Nombre" name="nvonombre" />
-              <input class="texto" type="text" placeholder="Edad" name="nvoedad" />
-              <input class="texto" type="text" placeholder="Fecha de Nacimiento" name="nvofechaNacimiento" maxlength="10"
-                  onkeyup="formatoFecha(this)">
-              <input class="texto" type="text" placeholder="Nº Hijos" name="nvohijos" maxlength="2">
-              <input class="texto" type="text" placeholder="Domicilio" name="nvodomicilio">
-              <input class="confirmar" type="submit" value="Actualizar" style="margin-top:2vh ;">
-          </div>
-      </div>
-  </form>
-  
 
 
     <form action="eliminarregistro.php" method="post">
@@ -80,13 +83,15 @@
       <div id="eliminaDatos">
         <div class="nuevoCliente">
           <button id="eliminar" type="submit">Eliminar Base de Datos</button>
-          <svg class="warning" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-          </svg>          
+          <svg class="warning" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+          </svg>
         </div>
       </div>
     </form>
-    
+
     <!-- Agrega el elemento del mensaje de confirmación aquí -->
     <div id="confirmMessage">
       <p>¿Está seguro de que desea borrar la base de datos permanentemente?</p>
@@ -94,7 +99,7 @@
         <button class="ok">OK</button>
         <button class="cancel">Cancelar</button>
       </div>
-    </div> 
+    </div>
 
   </div>
 
@@ -113,12 +118,12 @@
   const botonEliminar = document.getElementById('eliminar');
   const divEliminar = document.getElementById('eliminaDatos');
 
-  botonEliminar.addEventListener('mouseover', function(){
+  botonEliminar.addEventListener('mouseover', function () {
     divEliminar.style.boxShadow = 'red 0 0 30px 2px';
     divEliminar.style.border = '2px solid #ffb8b8';
   })
 
-  botonEliminar.addEventListener('mouseout', function(){
+  botonEliminar.addEventListener('mouseout', function () {
     divEliminar.style.boxShadow = '';
     divEliminar.style.border = '';
   })
@@ -126,34 +131,34 @@
 
   // Mostrar Alerts personalizados
 
-  document.getElementById('formEliminar').addEventListener('submit', function(event) {
-  event.preventDefault(); // Cancela el envío del formulario
-  mostrarConfirmacion();
-});
-
-function mostrarConfirmacion() {
-  var confirmMessage = document.getElementById('confirmMessage');
-  confirmMessage.style.display = 'block'; // Mostrar el mensaje
-  
-  var confirmButtons = document.getElementById('confirmButtons');
-
-  // Agregamos event listener para el botón de "OK"
-  var okButton = document.querySelector('#confirmButtons .ok');
-  okButton.addEventListener('click', function() {
-    confirmMessage.style.display = 'none';
-    // Aquí podrías ejecutar la acción de eliminar la base de datos
-    console.log("La base de datos será eliminada");
-    // Después de confirmar, enviamos el formulario manualmente
-    document.getElementById('formEliminar').submit();
+  document.getElementById('formEliminar').addEventListener('submit', function (event) {
+    event.preventDefault(); // Cancela el envío del formulario
+    mostrarConfirmacion();
   });
 
-  // Agregamos event listener para el botón de "Cancelar"
-  var cancelButton = document.querySelector('#confirmButtons .cancel');
-  cancelButton.addEventListener('click', function() {
-    confirmMessage.style.display = 'none';
-    console.log("Operación de eliminación cancelada");
-  });
-}
+  function mostrarConfirmacion() {
+    var confirmMessage = document.getElementById('confirmMessage');
+    confirmMessage.style.display = 'block'; // Mostrar el mensaje
+
+    var confirmButtons = document.getElementById('confirmButtons');
+
+    // Agregamos event listener para el botón de "OK"
+    var okButton = document.querySelector('#confirmButtons .ok');
+    okButton.addEventListener('click', function () {
+      confirmMessage.style.display = 'none';
+      // Aquí podrías ejecutar la acción de eliminar la base de datos
+      console.log("La base de datos será eliminada");
+      // Después de confirmar, enviamos el formulario manualmente
+      document.getElementById('formEliminar').submit();
+    });
+
+    // Agregamos event listener para el botón de "Cancelar"
+    var cancelButton = document.querySelector('#confirmButtons .cancel');
+    cancelButton.addEventListener('click', function () {
+      confirmMessage.style.display = 'none';
+      console.log("Operación de eliminación cancelada");
+    });
+  }
 
 
 </script>

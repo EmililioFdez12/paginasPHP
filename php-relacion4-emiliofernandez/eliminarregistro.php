@@ -19,5 +19,7 @@ if (!$connection2) {
 
 eliminarRegistro ($valor);
 
+echo("Cliente eliminado con exito");
+
 mysqli_close($connection2);
 ?>

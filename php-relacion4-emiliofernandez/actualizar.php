@@ -24,5 +24,7 @@ if (!$connection2) {
 
 actualizarRegistro($valor, $nvoNombre, $nvoEdad, $nvofechaNacimiento, $nvohijos, $nvodomicilio);
 
+echo("Cliente actualizado correctamente");
+
 mysqli_close($connection2);
 ?>

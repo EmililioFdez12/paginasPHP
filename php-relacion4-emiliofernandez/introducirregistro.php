@@ -28,6 +28,8 @@ $domicilio = $_POST['domicilio'];
 
 createRecord($connection2, $nombre, $edad, $fechaNacimiento, $hijos, $domicilio);
 
+echo("Datos introducidos correctamente");
+
 // Cerrar la conexión
 mysqli_close($connection2);
 ?>
